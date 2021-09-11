@@ -1,0 +1,11 @@
+{
+  "name": "tenderly_assignment",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start:container": "yarn --cwd ./container_app/ start",
+    "start:documents": "yarn --cwd ./documents_app/ start",
+    "start:kanban": "yarn --cwd ./kanban_app/ start",
+    "install": "yarn --cwd ./kanban_app/&yarn --cwd ./documents_app&yarn --cwd ./container_app"
+  }
+}
