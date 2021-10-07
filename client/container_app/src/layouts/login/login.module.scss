@@ -1,0 +1,25 @@
+.container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+
+  .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+    padding: 32px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 3px 3px 7px #00000059;
+
+    input {
+      border: none;
+      border-bottom: 1px solid silver;
+      outline: none !important;
+    }
+  }
+}

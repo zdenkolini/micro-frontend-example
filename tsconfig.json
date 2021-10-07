@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "baseUrl": ".",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "documents_app/App": ["./client/documents_app/src/App.tsx"],
+      "kanban_app/App": ["./client/kanban_app/src/App.tsx"]
+    }
+  },
+  "include": ["client", "declaration.d.ts"],
+  "exclude": [
+    "node_modules",
+    "./client/**/node_modules",
+    "./server/node_modules"
+  ]
+}

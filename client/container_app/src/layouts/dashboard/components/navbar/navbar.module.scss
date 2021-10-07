@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  box-shadow: 0 0 6px #00000043;
+
+  .routes {
+    display: flex;
+    margin: 0 -12px;
+
+    & > * {
+      margin: 0 12px;
+    }
+
+    .route {
+      color: purple;
+      text-decoration: none;
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .logout {
+    color: purple;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "documents": [
+    { "id": 1, "text": "First document" },
+    { "id": 2, "text": "Second document" },
+    { "id": 3, "text": "Third document" },
+    { "id": 4, "text": "Fourth document" },
+    { "id": 5, "text": "Fifth document" }
+  ],
+  "issues": [
+    { "id": 1, "name": "First task", "status": "in-progress" },
+    { "id": 2, "name": "Second task", "status": "done" },
+    { "id": 3, "name": "First task", "status": "doing" },
+    { "id": 4, "name": "First task", "status": "in-progress" },
+    { "id": 5, "name": "First task", "status": "in-progress" },
+    { "id": 6, "name": "First task", "status": "doing" }
+  ]
+}

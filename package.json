@@ -1,11 +1,23 @@
 {
-  "name": "tenderly_assignment",
+  "name": "micro-frontend-example",
   "version": "0.1.0",
   "private": true,
+  "workspaces": {
+    "packages": [
+      "client/container_app",
+      "client/documents_app",
+      "client/kanban_app",
+      "server"
+    ]
+  },
   "scripts": {
-    "start:container": "yarn --cwd ./container_app/ start",
-    "start:documents": "yarn --cwd ./documents_app/ start",
-    "start:kanban": "yarn --cwd ./kanban_app/ start",
-    "install": "yarn --cwd ./kanban_app/&yarn --cwd ./documents_app&yarn --cwd ./container_app"
+    "start": "yarn clear-ports&lerna run --parallel start",
+    "build": "lerna run build",
+    "clear-ports": "kill-port --port 3005,3002,3000,2020",
+    "install": "yarn --cwd ./client/kanban_app/&yarn --cwd ./client/documents_app&yarn --cwd ./client/container_app&yarn --cwd ./server"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0",
+    "kill-port": "^1.6.1"
   }
 }
