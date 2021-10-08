@@ -26,7 +26,7 @@ const Login = ({}: LoginProps): JSX.Element => {
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
       const response = await authService.login(data);
-      console.log(authService.login(data));
+
       TokenStore.authToken = response.data.access_token;
       push(Routes.DOCUMENTS);
     } catch (e) {

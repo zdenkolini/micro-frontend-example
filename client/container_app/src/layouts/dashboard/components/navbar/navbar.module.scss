@@ -13,9 +13,6 @@
     }
 
     .route {
-      color: purple;
-      text-decoration: none;
-
       &.active {
         text-decoration: underline;
       }
@@ -23,7 +20,5 @@
   }
 
   .logout {
-    color: purple;
-    text-decoration: none;
   }
 }

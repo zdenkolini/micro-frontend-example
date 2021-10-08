@@ -46,7 +46,7 @@ export const fetchSingleDocument = createAsyncThunk<
   GetSingleDocumentsResponse,
   { id: number },
   { state: RootState; rejectValue: GetSingleDocumentsError }
->(`${SLICE_NAME}/fetchSingleDocuments`, async ({ id }, { rejectWithValue }) => {
+>(`${SLICE_NAME}/fetchSingleDocument`, async ({ id }, { rejectWithValue }) => {
   try {
     return (await documentsService.getOne(id)).data;
   } catch (e) {

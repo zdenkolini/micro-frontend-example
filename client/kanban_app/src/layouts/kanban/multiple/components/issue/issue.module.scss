@@ -1,0 +1,14 @@
+.issue {
+  border-radius: 4px;
+  box-shadow: 0 0 6px #00000043;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  text-decoration: none;
+  margin-bottom: 8px;
+
+  * {
+    color: purple !important;
+    margin: 0;
+  }
+}
