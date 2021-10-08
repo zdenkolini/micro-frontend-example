@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const pkg = require("./package.json");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
+const { SourceMapDevToolPlugin } = require("webpack");
 const ExternalTemplateRemotesPlugin = require("external-remotes-plugin");
 const path = require("path");
 const Dotenv = require("dotenv-webpack");
@@ -102,5 +103,6 @@ module.exports = {
     new Dotenv({
       safe: true,
     }),
+    new SourceMapDevToolPlugin(),
   ],
 };

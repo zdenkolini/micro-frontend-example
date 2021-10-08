@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
+const { SourceMapDevToolPlugin } = require("webpack");
 const path = require("path");
 
 module.exports = {
@@ -36,6 +37,10 @@ module.exports = {
           ],
         },
       },
+      {
+        test: /\.(s[ac]|c)ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
     ],
   },
   plugins: [
@@ -58,5 +63,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
+    new SourceMapDevToolPlugin(),
   ],
 };

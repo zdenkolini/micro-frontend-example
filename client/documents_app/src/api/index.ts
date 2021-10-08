@@ -2,7 +2,7 @@ import axios from "axios";
 import TokenStore from "../util/tokenStore";
 
 const axiosInstance = axios.create({
-  baseURL: process.env.SERVICE_URL,
+  baseURL: "http://localhost:2020",
 });
 
 axiosInstance.interceptors.request.use((request) => {
@@ -14,14 +14,17 @@ axiosInstance.interceptors.request.use((request) => {
   return Promise.resolve(request);
 });
 
-axiosInstance.interceptors.response.use((response) => {
-  if (response.status === 401) {
-    TokenStore.logout();
-    return Promise.reject(response);
-  } else if (response.status >= 300 || response.status < 200) {
+axiosInstance.interceptors.response.use(
+  (response) => Promise.resolve(response),
+  (response) => {
+    if (response.response.status === 401) {
+      TokenStore.logout();
+      return Promise.reject(response);
+    } else if (response.status >= 300 || response.status < 200) {
+      return Promise.reject(response);
+    }
     return Promise.reject(response);
   }
-  return Promise.resolve(response);
-});
+);
 
 export default axiosInstance;
